@@ -29,4 +29,16 @@ module.exports = {
         },
       ],
     },
+    webpack: (config) => {
+      // Bỏ qua các ảnh từ leaflet/dist/images/*.png (tránh dùng sharp)
+      config.module.rules.push({
+        test: /leaflet\/dist\/images\/.*\.png$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash][ext]',
+        },
+      });
+  
+      return config;
+    },
   };
