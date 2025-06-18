@@ -3,20 +3,27 @@
 import L from 'leaflet'
 import React from 'react'
 import 'leaflet/dist/leaflet.css'
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png"
-import markerIcon from "leaflet/dist/images/marker-icon.png"
-import markerShadow from "leaflet/dist/images/marker-shadow.png"
+// import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png"
+// import markerIcon from "leaflet/dist/images/marker-icon.png"
+// import markerShadow from "leaflet/dist/images/marker-shadow.png"
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import toast from 'react-hot-toast'
 
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
+// L.Icon.Default.mergeOptions({
+//   iconUrl: markerIcon.src,
+//   iconRetinaUrl: markerIcon2x.src,
+//   shadowUrl: markerShadow.src
+// });
+
 L.Icon.Default.mergeOptions({
-  iconUrl: markerIcon.src,
-  iconRetinaUrl: markerIcon2x.src,
-  shadowUrl: markerShadow.src
+  iconUrl: "/images/marker-icon.png",
+  iconRetinaUrl: "/images/marker-icon-2x.png",
+  shadowUrl: "/images/marker-shadow.png",
 });
+
 
 interface MapProps {
   center?: number[]
