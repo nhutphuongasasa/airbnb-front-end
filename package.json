@@ -418,6 +418,7 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.18",
     "@types/node": "22.15.19",
     "@types/react-date-range": "^1.4.10",
     "autoprefixer": "^10.4.21",
