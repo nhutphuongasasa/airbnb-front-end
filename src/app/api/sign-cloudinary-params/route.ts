@@ -41,7 +41,8 @@ import { NextResponse } from 'next/server';
 import dotenv from 'dotenv';
 
 // Cấu hình môi trường
-dotenv.config();
+// dotenv.config();
+export const runtime = "nodejs";
 
 // Cấu hình Cloudinary - nên validate env variables
 cloudinary.config({
