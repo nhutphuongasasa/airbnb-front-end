@@ -13,7 +13,7 @@ import { safeListing, SafeReservation, SafeUser } from '@/types'
 import toast from 'react-hot-toast'
 
 
-const ListingPage =  ({ params }: { params: IParam}) => {
+const ListingPage =  () => {
   // const listing = await getListingById(params)
   // const reservations = await getReservations(params)
   // const currentUser = await getCurrentUser()
