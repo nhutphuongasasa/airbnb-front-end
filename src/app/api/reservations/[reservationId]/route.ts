@@ -13,7 +13,7 @@ export async function DELETE(request: NextRequest, context: { params: IParams })
         return NextResponse.error()
     }
 
-    const { reservationId } = await context.params
+    const { reservationId } = context.params
 
     if (!reservationId || typeof reservationId !== 'string'){
         throw new Error("Invalid ID")
