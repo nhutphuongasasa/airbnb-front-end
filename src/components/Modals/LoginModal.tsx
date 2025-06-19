@@ -73,7 +73,7 @@ const LoginModal = () => {
 
     const handleMessage = (event: MessageEvent) => {
       console.log("Got message", event)
-      if(event.origin !== 'http://localhost:8080') return
+      if(event.origin !== process.env.NEXT_PUBLIC_SERVER_URL) return
       toast.success("handle Message")
 
       const {user, error} = event.data
