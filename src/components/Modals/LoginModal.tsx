@@ -65,7 +65,7 @@ const LoginModal = () => {
 
   const handleLoginWithGoogle = useCallback( async () => {
     const popup = window.open(
-      `https://aibnb-back-end-5.onrender.com/api/auth/google`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/google`,
       "googleLogin",
       // "width=500,height=600"
       `width=${width},height=${height},left=${left},top=${top}`
@@ -73,7 +73,7 @@ const LoginModal = () => {
 
     const handleMessage = (event: MessageEvent) => {
       console.log("Got message", event)
-      if(event.origin !== process.env.NEXT_PUBLIC_SERVER_URL) return
+      // if(event.origin !== process.env.NEXT_PUBLIC_SERVER_URL) return
       toast.success("handle Message")
 
       const {user, error} = event.data
