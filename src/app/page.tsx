@@ -18,7 +18,7 @@ interface HomeProps {
   searchParams: IListingsParams
 }
 
-export default  function Home({searchParams}: HomeProps) {
+export default  function Home() {
   // const listings = await getListings(searchParams)
 
   // const [currentUser, setCurrentUser] = useState<SafeUser>()
@@ -47,7 +47,7 @@ export default  function Home({searchParams}: HomeProps) {
       }
     }
     fetchListings()
-  }, [searchParams])
+  }, [searchParam])
 
 
   if (listings.length === 0){
