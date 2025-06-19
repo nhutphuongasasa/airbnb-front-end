@@ -65,7 +65,7 @@ const LoginModal = () => {
 
   const handleLoginWithGoogle = useCallback( async () => {
     const popup = window.open(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/google`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/google`,
       "googleLogin",
       // "width=500,height=600"
       `width=${width},height=${height},left=${left},top=${top}`
