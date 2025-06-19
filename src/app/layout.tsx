@@ -36,7 +36,7 @@ export default async function RootLayout({
           <ToasterProvider/>
           <RentModal></RentModal>
           <RegisterModal/>
-          <SearchModal></SearchModal>
+          {/* <SearchModal></SearchModal> */}
           <LoginModal/>
         <Navbar/>
         <div className="pb-20 pt-28">
