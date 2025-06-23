@@ -157,9 +157,9 @@ const LoginModal = () => {
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => {
+        onClick={async() => {
           window.location.href  = `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/github`
-          fetchProfile()
+          await fetchProfile()
         }}
         // onClick={() => signIn('github')}
       />
