@@ -76,7 +76,8 @@ const LoginModal = () => {
       toast.success("handle Message")
 
       const {user, error} = event.data
-
+      console.log(event.data)
+      console.log(user)
       if(error){
         // toast.error(error.message)
         return
