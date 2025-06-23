@@ -15,6 +15,7 @@ import useRegisterModal from "../../hooks/useRegisterModal";
 import { signIn } from "next-auth/react";
 import userUserStore from "@/hooks/useUser";
 import axios from "axios";
+import { fetchProfile } from "@/hooks/useProfile";
 
 const LoginModal = () => {
   const width = 500;
@@ -156,7 +157,10 @@ const LoginModal = () => {
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => window.location.href  = `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/github`}
+        onClick={() => {
+          window.location.href  = `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/github`
+          fetchProfile()
+        }}
         // onClick={() => signIn('github')}
       />
       <div className="gap-2 flex justify-center text-neutral-500 text-center mt-2 font-light">
