@@ -70,16 +70,18 @@ const LoginModal = () => {
       `width=${width},height=${height},left=${left},top=${top}`
     )
 
+    console.log("oke")
+
     const handleMessage = (event: MessageEvent) => {
       console.log("Got message", event)
-      // if(event.origin !== process.env.NEXT_PUBLIC_SERVER_URL) return
+      if(event.origin !== process.env.NEXT_PUBLIC_SERVER_URL) return
       toast.success("handle Message")
 
       const {user, error} = event.data
       console.log(event.data)
       console.log(user)
       if(error){
-        // toast.error(error.message)
+        toast.error(error.message)
         return
       }
 
