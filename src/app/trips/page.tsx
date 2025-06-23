@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import getCurrentUser from '../actions/getCurrentUser'
+// import getCurrentUser from '../actions/getCurrentUser'
 import ClientOnly from '@/components/ClientOnly'
 import EmptyState from '@/components/EmptyState'
 import { getReservations } from '../actions/getReservations'
